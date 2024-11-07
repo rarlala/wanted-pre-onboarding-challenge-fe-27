@@ -1,18 +1,22 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LoginField, LoginScheme, LoginSchemeType } from "../../../types/auth";
+import {
+  SignUpField,
+  SignUpScheme,
+  SignUpSchemeType,
+} from "../../../types/auth";
 import style from "./index.module.scss";
 
-const Login = () => {
+const SignUp = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginSchemeType>({
-    resolver: zodResolver(LoginScheme),
+  } = useForm<SignUpSchemeType>({
+    resolver: zodResolver(SignUpScheme),
   });
 
-  const onSubmit: SubmitHandler<LoginField> = (data) => {
+  const onSubmit: SubmitHandler<SignUpField> = (data) => {
     console.log(data);
   };
 
@@ -31,9 +35,9 @@ const Login = () => {
       <p className={style.error_message}>
         {(errors && errors.email?.message) || errors.password?.message}
       </p>
-      <button type="submit">Login</button>
+      <button type="submit">Sign Up</button>
     </form>
   );
 };
 
-export default Login;
+export default SignUp;

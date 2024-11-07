@@ -76,6 +76,9 @@ main {
 
 body {
   line-height: 1;
+  background-color: black;
+  color: white;
+  font-size: 16px;
 }
 
 ol,
@@ -104,9 +107,23 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  outline: none;
 }
 
-body {
-  background-color: black;
-  color: white;
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
 }
